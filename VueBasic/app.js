@@ -14,6 +14,11 @@ const app = Vue.createApp({
       toggleShowBooks() {
         this.showBooks =  !this.showBooks
       },
+    },
+    computed:{
+        filterBooks(){
+            return this.books.filter((book)=>book.isFav)
+        }
     }
   })
   
